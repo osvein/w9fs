@@ -32,5 +32,5 @@ const DWORD	caps[]	= {
 DWORD APIENTRY
 NPGetCaps(DWORD type)
 {
-	return type < nelem(caps) ? caps[type] : 0;
+	return type < sizeof(caps) / sizeof(*caps) ? caps[type] : 0;
 }
